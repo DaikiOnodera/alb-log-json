@@ -14,6 +14,6 @@ SELECT
   , client
 FROM alblog20250630
 WHERE
-  (CAST(request_processing_time AS FLOAT) + CAST(target_processing_time AS FLOAT) + CAST(response_processing_time AS FLOAT)) > 30
-ORDER BY total_time DESC
+  client like '60.103.70.253%'
+ORDER BY timestamp ASC
 "
